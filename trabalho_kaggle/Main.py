@@ -1,7 +1,7 @@
-from .Application.Use_Cases.informacoesdataset import exibir_informacoes_base
-from .Application.Use_Cases.relatoriosdataset import gerar_relatorio
-from .Domain.Entities.downloaddataset import baixar_dataset
-from .Adapters.Repository.autenticadorkaggle import autenticar_kaggle
+from trabalho_kaggle.Application.Use_Cases.informacoesdataset import exibir_informacoes_base
+from trabalho_kaggle.Application.Use_Cases.relatoriosdataset import gerar_relatorio
+from trabalho_kaggle.Domain.Entities.downloaddataset import baixar_dataset
+from trabalho_kaggle.Adapters.Repository.autenticadorkaggle import autenticar_kaggle
 
 def main():
     """
