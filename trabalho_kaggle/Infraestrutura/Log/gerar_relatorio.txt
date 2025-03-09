@@ -1,0 +1,44 @@
+Arquivo carregado: circuits.csv
+Arquivo carregado: constructors.csv
+Arquivo carregado: constructor_results.csv
+Arquivo carregado: constructor_standings.csv
+Arquivo carregado: drivers.csv
+Arquivo carregado: driver_standings.csv
+Arquivo carregado: lap_times.csv
+Arquivo carregado: pit_stops.csv
+Arquivo carregado: qualifying.csv
+Arquivo carregado: races.csv
+Arquivo carregado: results.csv
+Arquivo carregado: seasons.csv
+Arquivo carregado: sprint_results.csv
+Arquivo carregado: status.csv
+Todos os arquivos foram carregados com sucesso!
+
+--- Relatório do Dataset de Fórmula 1 ---
+
+Arquivo: circuits.csv
+Linhas: 77, Colunas: 9
+Colunas: ['circuitId', 'circuitRef', 'name', 'location', 'country', 'lat', 'lng', 'alt', 'url']
+   circuitId  circuitRef                name                 location    \
+0      1      albert_park  Albert Park Grand Prix Circuit     Melbourne   
+1      2           sepang    Sepang International Circuit  Kuala Lumpur   
+2      3          bahrain   Bahrain International Circuit        Sakhir   
+3      4        catalunya  Circuit de Barcelona-Catalunya      Montmeló   
+4      5         istanbul                   Istanbul Park      Istanbul   
+
+   country       lat       lng     alt  \
+0  Australia -37.84970  144.96800   10   
+1   Malaysia   2.76083  101.73800   18   
+2    Bahrain  26.03250   50.51060    7   
+3      Spain  41.57000    2.26111  109   
+4     Turkey  40.95170   29.40500  130   
+
+                              url                               
+0    http://en.wikipedia.org/wiki/Melbourne_Grand_Prix_Circuit  
+1    http://en.wikipedia.org/wiki/Sepang_International_Circuit  
+2   http://en.wikipedia.org/wiki/Bahrain_International_Circuit  
+3  http://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya  
+4                   http://en.wikipedia.org/wiki/Istanbul_Park   
+
+Gerando relatorio Sweetviz para circuits.csv...
+Erro ao gerar relatorio: module 'numpy' has no attribute 'VisibleDeprecationWarning'

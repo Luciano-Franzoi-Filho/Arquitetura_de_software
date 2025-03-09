@@ -1,7 +1,7 @@
 import pandas as pd
 import sweetviz as sv
 import dtale
-import autoviz.AutoViz_Class as AutoViz
+from autoviz.AutoViz_Class import AutoViz_Class
 from Domain.Interface.analisedataset import carregar_dados
 
 def gerar_relatorio():
@@ -32,7 +32,7 @@ def gerar_relatorio():
             
             # Gerar relatório AutoViz
             print(f"Gerando relatorio AutoViz para {nome_arquivo}...")
-            AV = AutoViz.AutoViz_Class()
+            AV = AutoViz_Class()
             AV.AutoViz(filename="", dfte=df)
 
         print("Relatorios gerados com sucesso!")

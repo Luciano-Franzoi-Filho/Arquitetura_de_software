@@ -16,7 +16,7 @@ def main():
         print("Erro na autenticação. Encerrando...")
         return
     
-    # Baixar dataset
+    # Baixar dataset 
     capturar_saida(baixar_dataset, api)
     
     # Exibir informações do dataset

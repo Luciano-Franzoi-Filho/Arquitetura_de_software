@@ -1,5 +1,6 @@
 import sys
 import os
+import io
 
 # Função para salvar a saída da execução em um arquivo txt
 def salvar_log(funcao_nome, mensagens):
@@ -27,16 +28,20 @@ def capturar_saida(func, *args, **kwargs):
     """
     Captura a saída da função passada e a salva em um arquivo.
     """
-    # Redireciona a saída padrão para capturar os prints
+    # Usando StringIO para capturar a saída sem interferir em sys.stdout
     mensagens = []
-    sys.stdout = sys.__stdout__  # Restabelece a saída padrão
-    
-    def redirecionar_output(msg):
-        mensagens.append(msg)
-    
-    sys.stdout = redirecionar_output  # Captura a saída das funções chamadas
-    
-    func(*args, **kwargs)
-    
+    old_stdout = sys.stdout  # Salva a saída padrão original
+    sys.stdout = io.StringIO()  # Redireciona a saída para um buffer
+
+    try:
+        func(*args, **kwargs)
+    except Exception as e:
+        # Se ocorrer erro durante a execução, salva a mensagem de erro
+        sys.stdout.write(f"Erro durante a execução: {e}\n")
+    finally:
+        # Captura tudo que foi impresso
+        mensagens = sys.stdout.getvalue().splitlines()  # Captura a saída gerada
+        sys.stdout = old_stdout  # Restaura a saída padrão
+
     # Salva a saída capturada no arquivo de log
     salvar_log(func.__name__, mensagens)

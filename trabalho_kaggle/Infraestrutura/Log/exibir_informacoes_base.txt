@@ -1,0 +1,507 @@
+Arquivo carregado: circuits.csv
+Arquivo carregado: constructors.csv
+Arquivo carregado: constructor_results.csv
+Arquivo carregado: constructor_standings.csv
+Arquivo carregado: drivers.csv
+Arquivo carregado: driver_standings.csv
+Arquivo carregado: lap_times.csv
+Arquivo carregado: pit_stops.csv
+Arquivo carregado: qualifying.csv
+Arquivo carregado: races.csv
+Arquivo carregado: results.csv
+Arquivo carregado: seasons.csv
+Arquivo carregado: sprint_results.csv
+Arquivo carregado: status.csv
+Todos os arquivos foram carregados com sucesso!
+
+--- Informacoes da Base de Dados de Formula 1 ---
+
+Arquivo: circuits.csv
+Resumo estatistico:
+       circuitId     lat         lng         alt    
+count  77.000000  77.000000   77.000000    77.000000
+mean   39.883117  33.442925    1.076683   247.012987
+std    23.001701  22.808866   65.516951   362.738469
+min     1.000000 -37.849700 -118.189000    -7.000000
+25%    20.000000  32.777400   -9.394170    18.000000
+50%    40.000000  40.951700    3.930830   129.000000
+75%    59.000000  46.958900   19.248600   332.000000
+max    80.000000  57.265300  144.968000  2227.000000 
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 77 entries, 0 to 76
+Data columns (total 9 columns):
+ #   Column      Non-Null Count  Dtype  
+---  ------      --------------  -----  
+ 0   circuitId   77 non-null     int64  
+ 1   circuitRef  77 non-null     object 
+ 2   name        77 non-null     object 
+ 3   location    77 non-null     object 
+ 4   country     77 non-null     object 
+ 5   lat         77 non-null     float64
+ 6   lng         77 non-null     float64
+ 7   alt         77 non-null     int64  
+ 8   url         77 non-null     object 
+dtypes: float64(2), int64(2), object(5)
+memory usage: 5.5+ KB
+None 
+
+Arquivo: constructors.csv
+Resumo estatistico:
+       constructorId
+count   212.000000  
+mean    107.547170  
+std      61.952685  
+min       1.000000  
+25%      54.750000  
+50%     107.500000  
+75%     160.250000  
+max     215.000000   
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 212 entries, 0 to 211
+Data columns (total 5 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   constructorId   212 non-null    int64 
+ 1   constructorRef  212 non-null    object
+ 2   name            212 non-null    object
+ 3   nationality     212 non-null    object
+ 4   url             212 non-null    object
+dtypes: int64(1), object(4)
+memory usage: 8.4+ KB
+None 
+
+Arquivo: constructor_results.csv
+Resumo estatistico:
+       constructorResultsId     raceId     constructorId     points   
+count      12625.000000      12625.000000  12625.000000   12625.000000
+mean        8424.500594        528.235802     45.956119       4.053545
+std         5666.310522        314.793555     59.468418       7.862202
+min            1.000000          1.000000      1.000000       0.000000
+25%         3157.000000        287.000000      6.000000       0.000000
+50%         6313.000000        487.000000     22.000000       0.000000
+75%        13965.000000        751.000000     54.000000       5.000000
+max        17129.000000       1144.000000    215.000000      66.000000 
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 12625 entries, 0 to 12624
+Data columns (total 5 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   constructorResultsId  12625 non-null  int64  
+ 1   raceId                12625 non-null  int64  
+ 2   constructorId         12625 non-null  int64  
+ 3   points                12625 non-null  float64
+ 4   status                12625 non-null  object 
+dtypes: float64(1), int64(3), object(1)
+memory usage: 493.3+ KB
+None 
+
+Arquivo: constructor_standings.csv
+Resumo estatistico:
+       constructorStandingsId     raceId     constructorId     points     \
+count       13391.000000       13391.000000  13391.000000   13391.000000   
+mean        16982.110821         535.399821     49.603390      37.178515   
+std          8868.446172         307.705928     61.213953      84.346048   
+min             1.000000           1.000000      1.000000       0.000000   
+25%          8883.500000         302.000000      6.000000       0.000000   
+50%         20634.000000         508.000000     25.000000       7.000000   
+75%         25047.500000         740.000000     58.000000      33.000000   
+max         28982.000000        1144.000000    215.000000     860.000000   
+
+         position        wins      
+count  13391.000000  13391.000000  
+mean       7.226047      0.697409  
+std        4.355923      1.879569  
+min        1.000000      0.000000  
+25%        4.000000      0.000000  
+50%        7.000000      0.000000  
+75%       10.000000      0.000000  
+max       22.000000     21.000000   
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 13391 entries, 0 to 13390
+Data columns (total 7 columns):
+ #   Column                  Non-Null Count  Dtype  
+---  ------                  --------------  -----  
+ 0   constructorStandingsId  13391 non-null  int64  
+ 1   raceId                  13391 non-null  int64  
+ 2   constructorId           13391 non-null  int64  
+ 3   points                  13391 non-null  float64
+ 4   position                13391 non-null  int64  
+ 5   positionText            13391 non-null  object 
+ 6   wins                    13391 non-null  int64  
+dtypes: float64(1), int64(5), object(1)
+memory usage: 732.4+ KB
+None 
+
+Arquivo: drivers.csv
+Resumo estatistico:
+        driverId 
+count  861.000000
+mean   431.061556
+std    248.793797
+min      1.000000
+25%    216.000000
+50%    431.000000
+75%    646.000000
+max    862.000000 
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 861 entries, 0 to 860
+Data columns (total 9 columns):
+ #   Column       Non-Null Count  Dtype 
+---  ------       --------------  ----- 
+ 0   driverId     861 non-null    int64 
+ 1   driverRef    861 non-null    object
+ 2   number       861 non-null    object
+ 3   code         861 non-null    object
+ 4   forename     861 non-null    object
+ 5   surname      861 non-null    object
+ 6   dob          861 non-null    object
+ 7   nationality  861 non-null    object
+ 8   url          861 non-null    object
+dtypes: int64(1), object(8)
+memory usage: 60.7+ KB
+None 
+
+Arquivo: driver_standings.csv
+Resumo estatistico:
+       driverStandingsId     raceId       driverId       points     \
+count    34863.000000     34863.000000  34863.000000  34863.000000   
+mean     43176.154232       584.413562    316.932909     14.704423   
+std      21934.276898       292.275820    274.665660     38.978094   
+min          1.000000         1.000000      1.000000      0.000000   
+25%      19834.500000       354.000000     88.000000      0.000000   
+50%      50044.000000       603.000000    223.000000      1.000000   
+75%      62054.500000       805.000000    521.000000     10.000000   
+max      73270.000000      1144.000000    862.000000    575.000000   
+
+         position        wins      
+count  34863.000000  34863.000000  
+mean      19.716720      0.277343  
+std       16.293401      1.032618  
+min        1.000000      0.000000  
+25%        8.000000      0.000000  
+50%       16.000000      0.000000  
+75%       26.000000      0.000000  
+max      108.000000     19.000000   
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 34863 entries, 0 to 34862
+Data columns (total 7 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   driverStandingsId  34863 non-null  int64  
+ 1   raceId             34863 non-null  int64  
+ 2   driverId           34863 non-null  int64  
+ 3   points             34863 non-null  float64
+ 4   position           34863 non-null  int64  
+ 5   positionText       34863 non-null  object 
+ 6   wins               34863 non-null  int64  
+dtypes: float64(1), int64(5), object(1)
+memory usage: 1.9+ MB
+None 
+
+Arquivo: lap_times.csv
+Resumo estatistico:
+          raceId        driverId          lap         position     \
+count  589081.000000  589081.000000  589081.000000  589081.000000   
+mean      600.544465     325.796446      30.018104       9.661951   
+std       434.375976     387.561736      18.407126       5.528553   
+min         1.000000       1.000000       1.000000       1.000000   
+25%       140.000000      16.000000      14.000000       5.000000   
+50%       861.000000      48.000000      29.000000       9.000000   
+75%      1003.000000     822.000000      44.000000      14.000000   
+max      1144.000000     862.000000      87.000000      24.000000   
+
+       milliseconds  
+count  5.890810e+05  
+mean   9.579945e+04  
+std    7.639973e+04  
+min    5.540400e+04  
+25%    8.204100e+04  
+50%    9.060800e+04  
+75%    1.019300e+05  
+max    7.507547e+06   
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 589081 entries, 0 to 589080
+Data columns (total 6 columns):
+ #   Column        Non-Null Count   Dtype 
+---  ------        --------------   ----- 
+ 0   raceId        589081 non-null  int64 
+ 1   driverId      589081 non-null  int64 
+ 2   lap           589081 non-null  int64 
+ 3   position      589081 non-null  int64 
+ 4   time          589081 non-null  object
+ 5   milliseconds  589081 non-null  int64 
+dtypes: int64(5), object(1)
+memory usage: 27.0+ MB
+None 
+
+Arquivo: pit_stops.csv
+Resumo estatistico:
+          raceId       driverId        stop           lap      milliseconds
+count  11371.000000  11371.000000  11371.000000  11371.000000  1.137100e+04
+mean     981.194882    549.734500      1.787969     25.387389  8.523050e+04
+std       92.326831    383.734981      1.521462     14.831497  3.104273e+05
+min      841.000000      1.000000      1.000000      1.000000  1.289700e+04
+25%      895.000000     20.000000      1.000000     13.000000  2.193750e+04
+50%      971.000000    817.000000      2.000000     25.000000  2.360600e+04
+75%     1065.000000    835.000000      2.000000     36.000000  2.654400e+04
+max     1144.000000    862.000000     70.000000     78.000000  3.069017e+06 
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 11371 entries, 0 to 11370
+Data columns (total 7 columns):
+ #   Column        Non-Null Count  Dtype 
+---  ------        --------------  ----- 
+ 0   raceId        11371 non-null  int64 
+ 1   driverId      11371 non-null  int64 
+ 2   stop          11371 non-null  int64 
+ 3   lap           11371 non-null  int64 
+ 4   time          11371 non-null  object
+ 5   duration      11371 non-null  object
+ 6   milliseconds  11371 non-null  int64 
+dtypes: int64(5), object(2)
+memory usage: 622.0+ KB
+None 
+
+Arquivo: qualifying.csv
+Resumo estatistico:
+         qualifyId      raceId       driverId    constructorId     number     \
+count  10494.000000  10494.000000  10494.000000  10494.000000   10494.000000   
+mean    5262.482847    624.600915    343.002287     47.918430      18.786449   
+std     3046.588486    428.298147    389.586448     73.217993      18.447502   
+min        1.000000      1.000000      1.000000      1.000000       0.000000   
+25%     2625.250000    160.000000     17.000000      4.000000       7.000000   
+50%     5249.500000    870.000000     60.000000      9.000000      14.000000   
+75%     7893.750000   1006.000000    822.000000     31.000000      22.000000   
+max    10551.000000   1144.000000    862.000000    215.000000      99.000000   
+
+         position    
+count  10494.000000  
+mean      11.195826  
+std        6.260374  
+min        1.000000  
+25%        6.000000  
+50%       11.000000  
+75%       16.000000  
+max       28.000000   
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 10494 entries, 0 to 10493
+Data columns (total 9 columns):
+ #   Column         Non-Null Count  Dtype 
+---  ------         --------------  ----- 
+ 0   qualifyId      10494 non-null  int64 
+ 1   raceId         10494 non-null  int64 
+ 2   driverId       10494 non-null  int64 
+ 3   constructorId  10494 non-null  int64 
+ 4   number         10494 non-null  int64 
+ 5   position       10494 non-null  int64 
+ 6   q1             10494 non-null  object
+ 7   q2             10472 non-null  object
+ 8   q3             10448 non-null  object
+dtypes: int64(6), object(3)
+memory usage: 738.0+ KB
+None 
+
+Arquivo: races.csv
+Resumo estatistico:
+         raceId        year         round      circuitId 
+count  1125.000000  1125.000000  1125.000000  1125.000000
+mean    565.710222  1992.703111     8.579556    23.889778
+std     328.813817    20.603848     5.159910    19.633527
+min       1.000000  1950.000000     1.000000     1.000000
+25%     282.000000  1977.000000     4.000000     9.000000
+50%     563.000000  1994.000000     8.000000    18.000000
+75%     845.000000  2011.000000    13.000000    34.000000
+max    1144.000000  2024.000000    24.000000    80.000000 
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1125 entries, 0 to 1124
+Data columns (total 18 columns):
+ #   Column       Non-Null Count  Dtype 
+---  ------       --------------  ----- 
+ 0   raceId       1125 non-null   int64 
+ 1   year         1125 non-null   int64 
+ 2   round        1125 non-null   int64 
+ 3   circuitId    1125 non-null   int64 
+ 4   name         1125 non-null   object
+ 5   date         1125 non-null   object
+ 6   time         1125 non-null   object
+ 7   url          1125 non-null   object
+ 8   fp1_date     1125 non-null   object
+ 9   fp1_time     1125 non-null   object
+ 10  fp2_date     1125 non-null   object
+ 11  fp2_time     1125 non-null   object
+ 12  fp3_date     1125 non-null   object
+ 13  fp3_time     1125 non-null   object
+ 14  quali_date   1125 non-null   object
+ 15  quali_time   1125 non-null   object
+ 16  sprint_date  1125 non-null   object
+ 17  sprint_time  1125 non-null   object
+dtypes: int64(4), object(14)
+memory usage: 158.3+ KB
+None 
+
+Arquivo: results.csv
+Resumo estatistico:
+         resultId       raceId       driverId    constructorId      grid      \
+count  26759.000000  26759.000000  26759.000000  26759.000000   26759.000000   
+mean   13380.977391    551.687283    278.673530     50.180537      11.134796   
+std     7726.134642    313.265036    282.703039     61.551498       7.202860   
+min        1.000000      1.000000      1.000000      1.000000       0.000000   
+25%     6690.500000    300.000000     57.000000      6.000000       5.000000   
+50%    13380.000000    531.000000    172.000000     25.000000      11.000000   
+75%    20069.500000    811.000000    399.500000     63.000000      17.000000   
+max    26764.000000   1144.000000    862.000000    215.000000      34.000000   
+
+       positionOrder     points         laps        statusId    
+count  26759.000000   26759.000000  26759.000000  26759.000000  
+mean      12.794051       1.987632     46.301768     17.224971  
+std        7.665951       4.351209     29.496557     26.026104  
+min        1.000000       0.000000      0.000000      1.000000  
+25%        6.000000       0.000000     23.000000      1.000000  
+50%       12.000000       0.000000     53.000000     10.000000  
+75%       18.000000       2.000000     66.000000     14.000000  
+max       39.000000      50.000000    200.000000    141.000000   
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 26759 entries, 0 to 26758
+Data columns (total 18 columns):
+ #   Column           Non-Null Count  Dtype  
+---  ------           --------------  -----  
+ 0   resultId         26759 non-null  int64  
+ 1   raceId           26759 non-null  int64  
+ 2   driverId         26759 non-null  int64  
+ 3   constructorId    26759 non-null  int64  
+ 4   number           26759 non-null  object 
+ 5   grid             26759 non-null  int64  
+ 6   position         26759 non-null  object 
+ 7   positionText     26759 non-null  object 
+ 8   positionOrder    26759 non-null  int64  
+ 9   points           26759 non-null  float64
+ 10  laps             26759 non-null  int64  
+ 11  time             26759 non-null  object 
+ 12  milliseconds     26759 non-null  object 
+ 13  fastestLap       26759 non-null  object 
+ 14  rank             26759 non-null  object 
+ 15  fastestLapTime   26759 non-null  object 
+ 16  fastestLapSpeed  26759 non-null  object 
+ 17  statusId         26759 non-null  int64  
+dtypes: float64(1), int64(8), object(9)
+memory usage: 3.7+ MB
+None 
+
+Arquivo: seasons.csv
+Resumo estatistico:
+          year    
+count    75.000000
+mean   1987.000000
+std      21.794495
+min    1950.000000
+25%    1968.500000
+50%    1987.000000
+75%    2005.500000
+max    2024.000000 
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 75 entries, 0 to 74
+Data columns (total 2 columns):
+ #   Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   year    75 non-null     int64 
+ 1   url     75 non-null     object
+dtypes: int64(1), object(1)
+memory usage: 1.3+ KB
+None 
+
+Arquivo: sprint_results.csv
+Resumo estatistico:
+        resultId     raceId      driverId   constructorId    number    \
+count  360.000000   360.000000  360.000000   360.000000    360.000000   
+mean   180.500000  1106.944444  734.658333    94.366667     28.177778   
+std    104.067286    25.636134  276.412115    89.166421     23.796293   
+min      1.000000  1061.000000    1.000000     1.000000      1.000000   
+25%     90.750000  1084.000000  822.000000     6.000000     11.000000   
+50%    180.500000  1112.500000  840.000000    84.000000     22.000000   
+75%    270.250000  1126.000000  848.000000   210.000000     44.000000   
+max    360.000000  1143.000000  861.000000   215.000000     99.000000   
+
+          grid     positionOrder    points       laps      statusId   
+count  360.000000   360.000000    360.000000  360.000000  360.000000  
+mean     9.922222    10.500000      1.550000   19.583333    3.336111  
+std      5.842363     5.774307      2.496293    4.752803   13.447963  
+min      0.000000     1.000000      0.000000    0.000000    1.000000  
+25%      5.000000     5.750000      0.000000   18.000000    1.000000  
+50%     10.000000    10.500000      0.000000   19.000000    1.000000  
+75%     15.000000    15.250000      3.000000   24.000000    1.000000  
+max     20.000000    20.000000      8.000000   24.000000  130.000000   
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 360 entries, 0 to 359
+Data columns (total 16 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   resultId        360 non-null    int64 
+ 1   raceId          360 non-null    int64 
+ 2   driverId        360 non-null    int64 
+ 3   constructorId   360 non-null    int64 
+ 4   number          360 non-null    int64 
+ 5   grid            360 non-null    int64 
+ 6   position        360 non-null    object
+ 7   positionText    360 non-null    object
+ 8   positionOrder   360 non-null    int64 
+ 9   points          360 non-null    int64 
+ 10  laps            360 non-null    int64 
+ 11  time            360 non-null    object
+ 12  milliseconds    360 non-null    object
+ 13  fastestLap      360 non-null    object
+ 14  fastestLapTime  360 non-null    object
+ 15  statusId        360 non-null    int64 
+dtypes: int64(10), object(6)
+memory usage: 45.1+ KB
+None 
+
+Arquivo: status.csv
+Resumo estatistico:
+        statusId 
+count  139.000000
+mean    71.237410
+std     41.092434
+min      1.000000
+25%     35.500000
+50%     72.000000
+75%    106.500000
+max    141.000000 
+
+Informacoes do DataFrame:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 139 entries, 0 to 138
+Data columns (total 2 columns):
+ #   Column    Non-Null Count  Dtype 
+---  ------    --------------  ----- 
+ 0   statusId  139 non-null    int64 
+ 1   status    139 non-null    object
+dtypes: int64(1), object(1)
+memory usage: 2.3+ KB
+None 
+
+Informacoes exibidas com sucesso!
