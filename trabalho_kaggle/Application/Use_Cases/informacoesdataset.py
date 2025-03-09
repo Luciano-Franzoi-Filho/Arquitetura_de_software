@@ -1,4 +1,4 @@
-from trabalho_kaggle.Domain.Entities.downloaddataset  import carregar_dados
+from Domain.Interface.analisedataset import carregar_dados
 
 def exibir_informacoes_base():
     """

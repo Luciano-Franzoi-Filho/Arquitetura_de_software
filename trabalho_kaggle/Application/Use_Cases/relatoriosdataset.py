@@ -2,7 +2,7 @@ import pandas as pd
 import sweetviz as sv
 import dtale
 import autoviz.AutoViz_Class as AutoViz
-from trabalho_kaggle.Domain.Interface.analisedataset import carregar_dados
+from Domain.Interface.analisedataset import carregar_dados
 
 def gerar_relatorio():
     """

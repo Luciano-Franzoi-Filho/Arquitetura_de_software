@@ -1,4 +1,4 @@
-from trabalho_kaggle.Adapters.Repository.autenticadorkaggle import autenticar_kaggle
+from Adapters.Repository.autenticadorkaggle import autenticar_kaggle
 
 def executar_autenticacao():
     """

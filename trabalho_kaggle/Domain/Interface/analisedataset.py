@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 
-def carregar_dados(caminho_arquivo="Autenticar/Kaggle_Repository/Domain/Entities/dataset"):
+def carregar_dados(caminho_arquivo="trabalho_kaggle/Domain/Entities/dataset"):
     """
     Carrega os arquivos CSV do dataset da Fórmula 1 para análise.
     """
