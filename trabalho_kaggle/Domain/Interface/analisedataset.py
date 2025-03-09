@@ -3,7 +3,7 @@ import pandas as pd
 
 def carregar_dados(caminho_arquivo="trabalho_kaggle/Domain/Entities/dataset"):
     """
-    Carrega os arquivos CSV do dataset da Fórmula 1 para análise.
+    Carrega os arquivos CSV do dataset da Formula 1 para analise.
     """
     try:
         arquivos = [f for f in os.listdir(caminho_arquivo) if f.endswith('.csv')]

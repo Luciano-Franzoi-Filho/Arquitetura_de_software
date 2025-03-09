@@ -10,19 +10,15 @@ def main():
     """
     print("Iniciando o sistema...")
 
-    # Autenticação no Kaggle
     api = autenticar_kaggle()
     if not api:
         print("Erro na autenticação. Encerrando...")
         return
     
-    # Baixar dataset 
     capturar_saida(baixar_dataset, api)
     
-    # Exibir informações do dataset
     capturar_saida(exibir_informacoes_base)
-    
-    # Gerar relatório
+
     capturar_saida(gerar_relatorio)
     
     print("Processo concluído com sucesso!")
